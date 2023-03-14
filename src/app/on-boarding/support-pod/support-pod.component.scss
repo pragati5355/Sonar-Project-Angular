@@ -1,0 +1,130 @@
+@import "../../../variable.scss";
+
+
+.custom-next-btn{
+    width: 200px;
+    height: 66px;
+    margin-top: 100px;
+    background: $sky-blue;
+    border-radius: 8px;
+    color: $light;
+    font-size: 20px;
+    line-height: 166%;
+    font-weight: 600;
+}
+
+.skip-text{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%; 
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.modal-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+    justify-content: center;
+    margin-top: 55px;
+    padding: 0px;
+}
+
+.modal-sub-header{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+}
+
+.custom-form-label{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+}
+
+.form-label-check{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;    
+}
+
+.custon-input-field{
+    background: #ffffff;
+    border: 1px solid #bababa;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 0px;
+}
+
+.custon-input-field:hover{
+    border: 1px solid $background;
+}
+
+.save-btn{
+    width: 200px;
+    height: 66px;
+    background: $sky-blue;
+    border-radius: 8px;
+    color: $light;
+    font-size: 20px;
+    line-height: 166%;
+    font-weight: 600;
+    margin-top: 35px;
+}
+
+.cancel-btn{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #737373;
+}
+
+.sucess-modal-header{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.sucess-sub-header{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.custom-ok-btn{
+    width: 200px;
+    height: 66px;
+    background: $sky-blue;
+    border-radius: 8px;
+    color: $light;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.custom-add-more-btn{
+    width: 200px;
+    height: 66px;
+    background : #f9f9f9;
+    color: $sky-blue; 
+    border-color: $sky-blue;
+    outline: $sky-blue;
+    border-radius: 8px;
+}

@@ -1,0 +1,198 @@
+<div class="register-screen">
+  <app-nav-bar></app-nav-bar>
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-1 col-md-10">
+        <div class="welcome-card">
+          <div class="welcome-header">
+            <p>Welcome to Sonar</p>
+          </div>
+          <div class="card custom-card">
+            <div class="card-body" style="padding: 30px">
+              <h4 class="card-title text-center mb-5">
+                <b>Registration Form</b>
+              </h4>
+              <form [formGroup]="registerForm">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      formControlName="firstName"
+                      placeholder="Enter your first name"
+                    />
+                    <div
+                      class="form-text"
+                      *ngIf="
+                        firstName && firstName.invalid && firstName.touched
+                      "
+                    >
+                      <span
+                        *ngIf="form.firstName.errors?.['required']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * First Name is required.
+                      </span>
+                      <span
+                        *ngIf="form.firstName.errors?.['pattern']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * This Field Requires Only Alphabets. </span
+                      >*
+                      <span
+                        *ngIf="form.firstName.errors?.['noSpaceAllowed']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * First Name should not contain space.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      formControlName="lastName"
+                      placeholder="Enter your last name"
+                    />
+                    <div
+                      class="form-text"
+                      *ngIf="lastName && lastName.invalid && lastName.touched"
+                    >
+                      <span
+                        *ngIf="form.lastName.errors?.['required']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Last Name is required.
+                      </span>
+                      <span
+                        *ngIf="form.lastName.errors?.['pattern']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * This Field Requires Only Alphabets.
+                      </span>
+                      <span
+                        *ngIf="form.lastName.errors?.['noSpaceAllowed']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Last Name should not contain space.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 mb-3">
+                    <label for="mobileno" class="form-label">Mobile No</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobileNo"
+                      formControlName="mobileNo"
+                      placeholder="Enter your mobile number"
+                    />
+                    <div
+                      class="form-text"
+                      *ngIf="mobileNo && mobileNo.invalid && mobileNo.touched"
+                    >
+                      <span
+                        *ngIf="form.mobileNo.errors?.['required']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Mobile No is required.
+                      </span>
+                      <span
+                        *ngIf="form.mobileNo.errors?.['pattern']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Please, Enter 10 digits Mobile Number.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="Email"
+                      formControlName="email"
+                      placeholder="Enter your email address"
+                    />
+                    <div
+                      class="form-text"
+                      *ngIf="email && email.invalid && email.touched"
+                    >
+                      <span
+                        *ngIf="form.email.errors?.['required']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Email Address is required.
+                      </span>
+                      <span
+                        *ngIf="form.email.errors?.['pattern']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Please provide a valid email address.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      formControlName="password"
+                      placeholder="Enter you password"
+                    />
+                    <div
+                      class="form-text"
+                      *ngIf="password && password.invalid && password.touched"
+                    >
+                      <span
+                        *ngIf="form.password.errors?.['required']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Password is required.
+                      </span>
+                      <span
+                        *ngIf="form.password.errors?.['passwordpattern']"
+                        class="text-danger"
+                        style="font-size: small"
+                      >
+                        * Password must contain at least one number, one
+                        uppercase and a lowercase letter and at least 8
+                        characters.<br />Password cannot contain whitespace.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button
+                    class="btn signup-btn"
+                    type="submit"
+                    [disabled]="registerForm.invalid"
+                    (click)="submit(registerForm.value)"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

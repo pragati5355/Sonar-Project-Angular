@@ -1,0 +1,39 @@
+<div class="welcome-screen">
+  <app-nav-bar></app-nav-bar>
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <div class="welcome-card">
+          <div class="welcome-header">
+            <p>Welcome to Sonar</p>
+          </div>
+          <div class="welcome-body mt-65">
+            <p>Are you a parent, youth, or school/ administrator?</p>
+            <!-- <input class="form-control mt-15" type="text" /> -->
+            <div class="custom-dropdown mb-3">
+              <select class="form-select mt-15" #member>
+                <option selected disabled hidden style="color: #949494">
+                  Parent, youth, or school/ administrator
+                </option>
+                <option>Parent</option>
+                <option>Youth</option>
+                <option>School</option>
+                <option>Administrator</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-center">
+            <button
+              type="button"
+              class="btn custom-btn"
+              (click)="onSelected(member.value)"
+            >
+              Next
+              <i class="fa fa-arrow-right-long"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

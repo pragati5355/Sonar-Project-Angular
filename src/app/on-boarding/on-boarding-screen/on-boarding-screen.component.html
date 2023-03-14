@@ -1,0 +1,266 @@
+<div class="onboarding-screen">
+  <app-nav-bar></app-nav-bar>
+  <div class="container">
+    <div class="row">
+      <ng-container
+        *ngIf="
+          currentScreen != 3 &&
+          currentScreen != 4 &&
+          currentScreen != 5 &&
+          currentScreen != 6
+        "
+      >
+        <div class="offset-md-3 col-md-6">
+          <div class="welcome-custom-card">
+            <div class="welcome-header">
+              <p>Welcome to Sonar</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen != 1 && currentScreen != 2">
+        <div class="offset-md-3 col-md-6">
+          <div class="welcome-custom-card">
+            <div class="welcome-header">
+              <p>How Sonar Works</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 1">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="card-body">
+              <div class="card-header-text mt-40">
+                <b>We all experience mental health challenges.</b>
+              </div>
+              <div class="card-sub-header">
+                <p>
+                  More than 50% of people will experience mental illness in
+                  their lifetime.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="laptop-img">
+                  <img
+                    src="../../../assets/images/Group 221.svg"
+                    alt=""
+                    style="
+                      width: 365px;
+                      height: 200px;
+                      float: right;
+                      margin-top: 110px;
+                    "
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="social-img">
+                  <img
+                    src="../../../assets/images/img1.png"
+                    alt=""
+                    style="width: 450px; height: 400px; float: right"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="submit()">
+            Next
+          </button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="currentScreen == 2">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="card-body">
+              <div class="card-header-text mt-40">
+                <b>Choose Sonar to prioritize your mental health.</b>
+              </div>
+              <div class="row">
+                <div class="col-md-8 offset-md-2 mt-30" style="color: white">
+                  Identify when you require support based on your online
+                  activity and short pulse check surveys. Get the help you need!
+                </div>
+              </div>
+              <div class="sonar-laptop-img">
+                <img src="../../../assets/images/sonarLaptopimg.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="submit()">
+            Next
+          </button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 3">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="card-body">
+              <div class="card-header-text mt-40">
+                <b>Set Up Your Account</b>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-5 col-sm-5">
+                  <div class="form-img text-center">
+                    <img
+                      src="../../../assets/images/formimg.svg"
+                      alt=""
+                      style="width: 400px; height: 340px; margin-top: 25px"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mt-175">
+                  <img src="../../../assets/images/Dottedarrow.svg" alt="" />
+                </div>
+                <div class="col-md-5 col-sm-5">
+                  <div class="social-img">
+                    <img
+                      src="../../../assets/images/OptIn_img.svg"
+                      alt=""
+                      style="width: 400px; height: 340px; margin-top: 25px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="submit()">
+            Next
+          </button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 4">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="card-body">
+              <div class="card-header-text mt-30">
+                <b>Complete Pulse Check Surveys</b>
+              </div>
+              <div class="card-sub-text text-center mt-30">
+                <p>
+                  Complete optional 4-question surveys alongside your
+                  classmates.
+                </p>
+              </div>
+              <div class="row">
+                <div class="offset-md-2 col-md-8">
+                  <div class="dashboard-img text-center mt-30">
+                    <img
+                      src="../../../assets/images/dashboard_img.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="submit()">
+            Next
+          </button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 5">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="caroffset-md-1d-body">
+              <div class="card-header-text mt-40">
+                <b>Access to resources and support.</b>
+              </div>
+              <div class="card-sub-text text-center mt-30">
+                <p>Get access to timely support and resources.</p>
+              </div>
+              <div class="row" style="margin-bottom: 35px">
+                <div class="col-md-6">
+                  <div class="mobile-img text-center mt-20">
+                    <img src="../../../assets/images/mobile_img.svg" alt="" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="peoples-img text-center mt-20">
+                    <img src="../../../assets/images/peoples_img.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="submit()">
+            Next
+          </button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 6">
+        <div class="col-md-12 mt-40">
+          <div class="card custom-cardbody">
+            <div class="caroffset-md-1d-body">
+              <div class="privacy-logo text-center mt-25">
+                <img src="../../../assets/images/privacy_logo.svg" alt="" />
+              </div>
+              <div class="card-header-text mt-10">
+                <b>Protecting Your Privacy.</b>
+              </div>
+              <div class="row">
+                <div class="privacy-text col-md-8 offset-md-2 mt-2">
+                  <b>You choose</b> who is notified when you need support.
+                  Information is <b>only</b> shared if you need support.
+                </div>
+              </div>
+              <div class="girls-img text-center mt-30">
+                <img src="../../../assets/images/girls_img.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn text-center">
+          <button class="btn custom-next-btn" type="submit" (click)="started()">
+            Let’s get started!
+          </button>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen != 6">
+        <div class="skip-btn text-center">
+          <a type="submit" (click)="skip()">
+            <b>Skip</b>
+            <span class="ps-1">
+              <img
+                src="../../../assets/images/Arrow 1.png"
+                alt=""
+                style="margin-left: 10px"
+              />
+            </span>
+          </a>
+        </div>
+      </ng-container>
+
+      <div
+        class="dot-indicator text-center mt-50"
+        style="margin-bottom: 60px; padding: 0px"
+      >
+        <ol
+          class="ob-carousel-indicators"
+          style="display: flex; justify-content: center"
+        >
+          <li class="dot-gray active"></li>
+          <li class="dot-gray"></li>
+          <li class="dot-gray"></li>
+          <li class="dot-gray"></li>
+          <li class="dot-gray"></li>
+          <li class="dot-gray"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,386 @@
+<div class="support-screen">
+  <app-nav-bar></app-nav-bar>
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <div
+          class="progress progress-border-round mt-85"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="progress-bar progress-border-round w-75 bg-color"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="start-value">0%</div>
+          </div>
+          <div class="col-md-6">
+            <div class="end-value">100%</div>
+          </div>
+        </div>
+        <div class="support-text mt-65">
+          <div class="support-text-header">
+            <b>Build Support Pod</b>
+          </div>
+          <div class="support-text-sub-header mt-30">
+            <p>
+              Your pod of mental health allies is a group of individuals
+              (friends, parents, trusted adults, etc.) who work together to
+              support your mental health. Choose and update your pod at any
+              time!
+            </p>
+          </div>
+        </div>
+        <div class="everyday-support-text mt-70">
+          <div class="support-title">
+            <img src="../../../assets/images/support_img.svg" alt="" />
+            <div class="support-text-title">
+              <b>Your Mental Health Allies</b>
+            </div>
+          </div>
+          <div class="support-sub-title mt-10">
+            <p>
+              At least one of your mental health allies needs to be one of your
+              parents/ guardians. You can choose that they are only contacted in
+              crisis situations as required by law.
+            </p>
+          </div>
+          <div class="add-support-btn mt-25">
+            <button
+              type="button"
+              class="custom-support-btn btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <i class="fa fa-plus"></i><b> Add Support</b>
+            </button>
+          </div>
+        </div>
+        <div class="support-next-btn text-center">
+          <button type="button" class="btn custom-next-btn">
+            Next
+            <img
+              src="../../../assets/images/next_arrow_img.svg"
+              alt=""
+              style="margin-left: 5px"
+            />
+          </button>
+        </div>
+        <div class="skip-text text-center mt-20">
+          <button class="btn" style="color: #737373">
+            <b>Skip for now</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+            data-bs-backdrop="static"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-lg"
+              style="padding: 0 75px 1px 75px"
+            >
+              <div class="modal-content" style="border-radius: 20px">
+                <div class="row">
+                  <div class="offset-md-1 col-md-10">
+                    <div class="modal-body">
+                      <div class="modal-title text-center">
+                        <b>Your Mental Health Ally</b>
+                      </div>
+                      <div class="modal-sub-header mt-15">
+                        <p>
+                          Add an ally who will support you through your mental
+                          health journey or during a crisis situation.
+                        </p>
+                      </div>
+                      <form [formGroup]="supportForm">
+                        <div class="mt-25">
+                          <label
+                            for="supportName"
+                            class="form-label custom-form-label"
+                            ><b>Name of Support</b></label
+                          >
+                          <div class="input-group mb-3">
+                            <input
+                              type="text"
+                              class="form-control custon-input-field"
+                              id="supportName"
+                              formControlName="supportName"
+                              placeholder="Clay Lee"
+                              style="
+                                background: url(../../../assets/images/support_name_img.svg)
+                                  no-repeat scroll 15px 9px;
+                                padding-left: 60px;
+                              "
+                            />
+                          </div>
+                          <div
+                            class="form-text"
+                            *ngIf="
+                              supportName &&
+                              supportName.invalid &&
+                              supportName.touched
+                            "
+                          >
+                            <span
+                              *ngIf="form.supportName.errors?.['required']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Support Name is required.
+                            </span>
+                            <span
+                              *ngIf="form.supportName.errors?.['pattern']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * This Field Requires Only Alphabets. </span
+                            >*
+                            <span
+                              *ngIf="form.supportName.errors?.['noSpaceAllowed']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Support Name should not contain space.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="mt-50">
+                          <label
+                            for="relation"
+                            class="form-label custom-form-label"
+                            ><b>Relationship</b></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control custon-input-field"
+                            id="relation"
+                            formControlName="relation"
+                            placeholder="Parent"
+                            style="
+                              background: url(../../../assets/images/donate-heart.svg)
+                                no-repeat scroll 15px 9px;
+                              padding-left: 60px;
+                            "
+                          />
+                        </div>
+                        <div class="mt-50">
+                          <label
+                            for="email"
+                            class="form-label custom-form-label"
+                            ><b>Email</b></label
+                          >
+                          <input
+                            type="email"
+                            class="form-control custon-input-field"
+                            id="email"
+                            aria-describedby="emailHelp"
+                            formControlName="email"
+                            placeholder="pods@getsonar.org"
+                            style="
+                              background: url(../../../assets/images/email-line.svg)
+                                no-repeat scroll 15px 9px;
+                              padding-left: 60px;
+                            "
+                          />
+                          <div
+                            class="form-text"
+                            *ngIf="email && email.invalid && email.touched"
+                          >
+                            <span
+                              *ngIf="form.email.errors?.['required']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Email Address is required.
+                            </span>
+                            <span
+                              *ngIf="form.email.errors?.['pattern']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Please provide a valid email address.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="mt-50">
+                          <label
+                            for="mobileno"
+                            class="form-label custom-form-label"
+                            ><b>Phone Number</b></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control custon-input-field"
+                            id="mobileNo"
+                            formControlName="mobileNo"
+                            placeholder="•• - •••• - ••••"
+                            style="
+                              background: url(../../../assets/images/phone-handset.svg)
+                                no-repeat scroll 15px 9px;
+                              padding-left: 60px;
+                            "
+                          />
+                          <div
+                            class="form-text"
+                            *ngIf="
+                              mobileNo && mobileNo.invalid && mobileNo.touched
+                            "
+                          >
+                            <span
+                              *ngIf="form.mobileNo.errors?.['required']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Mobile No is required.
+                            </span>
+                            <span
+                              *ngIf="form.mobileNo.errors?.['pattern']"
+                              class="text-danger"
+                              style="font-size: small"
+                            >
+                              * Please, Enter 10 digits Mobile Number.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="form-check mt-50">
+                          <div class="row">
+                            <div class="col-sm-1">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck1"
+                                style="
+                                  width: 34px;
+                                  height: 34px;
+                                  border-radius: 10px;
+                                "
+                              />
+                            </div>
+                            <label
+                              class="col-sm-11 form-label-check"
+                              for="exampleCheck1"
+                              >Check this box if you <b>only</b> want us to
+                              contact them in a
+                              <span style="color: #2ca3d1"
+                                ><b>crisis situation.</b></span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                        <div class="save-button text-center">
+                          <button
+                            type="submit"
+                            class="btn save-btn"
+                            [disabled]="supportForm.invalid"
+                            (click)="submit(supportForm.value)"
+                            data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal"
+                          >
+                            Save
+                          </button>
+                        </div>
+                        <div class="cancel-btn text-center mt-15">
+                          <a
+                            type="Cancel"
+                            id="closeModal"
+                            data-bs-dismiss="modal"
+                            ><b>Cancel</b></a
+                          >
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="modal fade"
+            id="exampleModalToggle2"
+            aria-hidden="true"
+            aria-labelledby="ex/* or 33px */ampleModalToggleLabel2"
+            tabindex="-1"
+            data-bs-backdrop="static"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-lg"
+              style="padding: 0 90px 0px 90px"
+            >
+              <div class="modal-content" style="border-radius: 20px">
+                <div class="modal-body">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="row">
+                    <div class="offset-md-1 col-md-10">
+                      <div class="sucess-modal-header">
+                        <b
+                          >Awesome, you’ve added to your everyday support pod of
+                          mental health allies.
+                        </b>
+                      </div>
+                      <div class="sucess-sub-header mt-50">
+                        <p>
+                          Your ally will be notified and provided with tools to
+                          support you with everyday challenges you have.
+                        </p>
+                      </div>
+                      <div class="ok-btn text-center mt-50">
+                        <button
+                          id="formClose"
+                          class="btn custom-ok-btn"
+                          type="button"
+                          data-bs-dismiss="modal"
+                        >
+                          <b>Ok</b>
+                        </button>
+                      </div>
+                      <div class="add-more-btn text-center mt-25">
+                        <button
+                          class="btn custom-add-more-btn"
+                          type="button"
+                          (click)="addForm()"
+                          data-bs-target="#exampleModal"
+                          data-bs-toggle="modal"
+                        >
+                          <i class="fa fa-plus"></i><b>Add more</b>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

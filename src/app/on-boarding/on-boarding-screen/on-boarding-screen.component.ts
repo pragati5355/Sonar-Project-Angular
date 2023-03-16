@@ -19,8 +19,7 @@ export class OnBoardingScreenComponent implements OnInit, OnChanges {
     if(currentStep != undefined && parseInt(currentStep)){
       this.currentScreen = parseInt(currentStep);
     } else {
-    this.router.navigate(["onboarding/select"]);
-      
+    this.router.navigate(["onboarding/select"]);  
     }
   }
   ngOnChanges(changes: SimpleChanges): void {

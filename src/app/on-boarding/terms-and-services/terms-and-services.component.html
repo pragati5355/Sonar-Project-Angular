@@ -1,0 +1,214 @@
+<div class="terms-screen">
+  <app-nav-bar></app-nav-bar>
+  <div class="container">
+    <div class="row">
+      <ng-container *ngIf="currentScreen != 2">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="progress progress-border-round mt-85"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar progress-border-round w-75 bg-color"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="start-value">0%</div>
+            </div>
+            <div class="col-md-6">
+              <div class="end-value">100%</div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen != 1">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="progress progress-border-round mt-85"
+            role="progressbar"
+            aria-label="Basic example"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar progress-border-round w-75 bg-color"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="start-value">0%</div>
+            </div>
+            <div class="col-md-6">
+              <div class="end-value">100%</div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 1">
+        <div class="offset-md-2 col-md-8">
+          <div
+            class="card mt-65"
+            style="border-radius: 20px; margin-bottom: 100px"
+          >
+            <div class="card-body">
+              <div class="card-title custom-card-title mt-50">
+                <img src="../../../assets/images/document_img.svg" alt="" />
+                <div class="terms-text"><b>Terms of Service</b></div>
+              </div>
+              <div class="row">
+                <div class="offset-md-1 col-md-10">
+                  <div class="services-text mt-30">
+                    <ol>
+                      <li class="text-list">
+                        All persons have the right to the best available mental
+                        health care, which shall be part of the health and
+                        social care system.
+                      </li>
+                      <li class="text-list">
+                        All persons with a mental illness, or who are being
+                        treated as such persons, shall be treated with humanity
+                        and respect for the inherent dignity of the human
+                        person.
+                      </li>
+                      <li class="text-list">
+                        Special care should be given within the purposes of
+                        these Principles and within the context of domestic law
+                        relating to the protection of minors to protect the
+                        rights of minors, including, if necessary, the
+                        appointment of a personal representative other than a
+                        family member.
+                      </li>
+                      <li class="text-list">
+                        Every person with a mental illness shall have the right
+                        to live and work, as far as possible, in the community.
+                      </li>
+                      <li class="text-list">
+                        A determination that a person has a mental illness shall
+                        be made in accordance with internationally accepted
+                        medical standards.
+                      </li>
+                      <li class="text-list">
+                        A determination of mental illness shall never be made on
+                        the basis of political, economic or social status, or
+                        membership of a cultural, racial or religious group, or
+                        any other reason not directly relevant to mental health
+                        status.
+                      </li>
+                      <li class="text-list">
+                        A background of past treatment or hospitalization as a
+                        patient shall not of itself justify any present or
+                        future determination of mental illness.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="accept-btn text-center mt-20">
+                <button
+                  type="button"
+                  class="btn custom-next-btn"
+                  (click)="accept()"
+                >
+                  Accept
+                </button>
+              </div>
+              <div class="decline-btn text-center mt-20 mb-30">
+                <button
+                  type="button"
+                  class="btn custom-decline-btn"
+                  (click)="decline()"
+                >
+                  Decline
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 2">
+        <div class="offset-md-2 col-md-8">
+          <div
+            class="card mt-65"
+            style="border-radius: 20px; margin-bottom: 100px"
+          >
+            <div class="card-body">
+              <div class="card-title custom-card-title mt-50">
+                <img src="../../../assets/images/privacy_logo.svg" alt="" />
+                <div class="terms-text"><b>Privacy Policy </b></div>
+              </div>
+              <div class="row">
+                <div class="offset-md-1 col-md-10">
+                  <div class="services-text mt-30">
+                    <ol>
+                      <li class="text-list">
+                        We clearly state the purposes for which we process
+                        personal data. We do this by means of this privacy
+                        statement.
+                      </li>
+                      <li class="text-list">
+                        We aim to limit our collection of personal data to only
+                        the personal data required for legitimate purposes.
+                      </li>
+                      <li class="text-list">
+                        We first request your explicit consent to process your
+                        personal data in cases requiring your consent.
+                      </li>
+                      <li class="text-list">
+                        We take appropriate security measures to protect your
+                        personal data and also require this from parties that
+                        process personal data on our behalf.
+                      </li>
+                      <li class="text-list">
+                        We respect your right to access your personal data or
+                        have it corrected or deleted
+                      </li>
+                      <li class="text-list">
+                        That you have the right to be fully informed in why we
+                        are collecting your information and how we are using it.
+                      </li>
+                      <li class="text-list">
+                        You have the right to request a copy of the information
+                        that we hold about you.
+                      </li>
+                      <li class="text-list">
+                        Where certain conditions apply, you have the right to
+                        have the data we hold about you transferred to another
+                        organisation.
+                      </li>
+                      <li class="text-list">
+                        Non-personal data is information we gather in general
+                        from mentalhealth.ie website. This cannot be used to
+                        identify or contact you. This might include your IP
+                        address, the browser you use and similar anonymous data.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="accept-btn text-center mt-20">
+                <button
+                  type="button"
+                  class="btn custom-next-btn"
+                  (click)="acceptPolicy()"
+                >
+                  Accept
+                </button>
+              </div>
+              <div class="decline-btn text-center mt-20 mb-30">
+                <button
+                  type="button"
+                  class="btn custom-decline-btn"
+                  (click)="decline()"
+                >
+                  Decline
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

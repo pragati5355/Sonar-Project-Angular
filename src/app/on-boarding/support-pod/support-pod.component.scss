@@ -21,6 +21,19 @@
     letter-spacing: -0.02em;
 }
 
+.added-support{
+    width: 125px;
+    height: 185px;
+}
+
+.support-name{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
 .modal-title{
     font-weight: 600;
     font-size: 24px;
@@ -96,6 +109,7 @@
     line-height: 166%;
     letter-spacing: -0.02em;
     color: $background;
+    margin-top: 90px;
 }
 
 .sucess-sub-header{

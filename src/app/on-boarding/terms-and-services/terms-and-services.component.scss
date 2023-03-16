@@ -1,0 +1,75 @@
+
+@import '../../../variable.scss';
+
+.custom-card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.terms-text{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    color: $background;
+    margin-left: 15px;
+}
+
+.services-text{
+    height: 600px;
+    overflow-y: scroll;
+    border-color: black;
+    outline: black;
+    box-shadow: black;
+    border: 0.5px solid grey;
+    border-radius: 8px;
+    padding: 20px 20px 20px 20px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 5px grey; 
+    border-radius: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background: #2CA3D1; 
+    border-radius: 10px;
+}
+
+.custom-decline-btn{
+    border-color: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;  
+    letter-spacing: -0.02em;
+    color: $sky-blue;
+}
+
+.ol {
+    padding: 20px;
+}
+
+.ol.li {
+    background: $light;
+    color: $background;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.text-list{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;  
+    letter-spacing: -0.02em;
+}
+  

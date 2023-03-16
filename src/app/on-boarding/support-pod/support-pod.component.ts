@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-support-pod',
   templateUrl: './support-pod.component.html',
@@ -18,7 +19,9 @@ export class SupportPodComponent implements OnInit {
     mobileNo : new FormControl('',[Validators.required,Validators.pattern(this.mobilePattern)]),
   });
 
-  constructor() { }
+  constructor(
+    private router : Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -61,8 +64,12 @@ export class SupportPodComponent implements OnInit {
   }
 
   addForm(){
-    let formClose = document.getElementById('formClose');
-    formClose?.click();
+    let closeSucess = document.getElementById('closeSucess');
+    closeSucess?.click();
+  }
+
+  next(){
+    this.router.navigate(['/onboarding/optin']);
   }
 
 }

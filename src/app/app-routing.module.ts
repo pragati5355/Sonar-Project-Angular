@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path : '',
-    redirectTo : '/select',
+    redirectTo : 'onboarding/signup',
     pathMatch : 'full'
   }
 ];

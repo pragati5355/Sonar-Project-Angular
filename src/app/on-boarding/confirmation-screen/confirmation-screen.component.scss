@@ -1,0 +1,37 @@
+@import '../../../variable.scss';
+
+.confirm-title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    color: $light;
+}
+
+.confirm-header{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: $light;
+}
+
+.confirm-sub-header{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: $light;
+}
+
+.custom-confirm-btn{
+    padding: 12px 75px 12px 75px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

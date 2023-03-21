@@ -16,7 +16,7 @@ export class OptInComponent implements OnInit {
   }
 
   optIn(){
-    this.router.navigate(['onboarding/aggrement/service']);
+    this.router.navigate(['onboarding/aggrement/1']);
   }
 
 }

@@ -118,7 +118,8 @@
                 <button
                   type="button"
                   class="btn custom-decline-btn"
-                  (click)="decline()"
+                  data-bs-toggle="modal"
+                  data-bs-target="#openModal"
                 >
                   Decline
                 </button>
@@ -200,7 +201,8 @@
                 <button
                   type="button"
                   class="btn custom-decline-btn"
-                  (click)="decline()"
+                  data-bs-toggle="modal"
+                  data-bs-target="#openModal"
                 >
                   Decline
                 </button>
@@ -209,6 +211,76 @@
           </div>
         </div>
       </ng-container>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="modal fade"
+            id="openModal"
+            aria-hidden="true"
+            aria-labelledby="ex/* or 33px */ampleModalToggleLabel2"
+            tabindex="-1"
+            data-bs-backdrop="static"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-lg"
+              style="padding: 0 90px 0px 90px"
+            >
+              <div class="modal-content" style="border-radius: 20px">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="offset-md-1 col-md-10">
+                      <div class="terms-header text-center mt-20">
+                        <b>Alert !</b>
+                      </div>
+                      <div class="terms-sub-header text-center mt-15">
+                        <p>
+                          Are you sure you want to decline the terms of service?
+                        </p>
+                        <p>You wont able to explore the website!</p>
+                      </div>
+                      <div
+                        class="inline-btn mt-10"
+                        style="display: inline-flex"
+                      >
+                        <div
+                          class="yes-btn text-center"
+                          style="margin-left: 30px"
+                        >
+                          <button
+                            id="closeSucess"
+                            class="btn custom-ok-btn"
+                            type="button"
+                            (click)="decline()"
+                          >
+                            <b>Yes</b>
+                          </button>
+                        </div>
+                        <div
+                          class="add-more-btn text-center"
+                          style="margin-left: 100px"
+                        >
+                          <button
+                            class="btn custom-ok-btn"
+                            type="button"
+                            data-bs-dismiss="modal"
+                            style="margin-left: 50px"
+                          >
+                            <b>No</b>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

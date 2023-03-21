@@ -48,13 +48,13 @@
               crisis situations as required by law.
             </p>
           </div>
-          <div class="added-support">
+          <!-- <div class="added-support">
             <div class="support-avtar">
               <img src="../../../assets/images/Avatar 1.svg" alt="" />
             </div>
             <div class="support-name text-center mt-2">Phil Li</div>
             <div class="support-relation text-center mt-2">Parent</div>
-          </div>
+          </div> -->
           <div class="add-support-btn mt-25">
             <button
               type="button"
@@ -79,6 +79,7 @@
         <div class="skip-text text-center mt-20">
           <button
             class="btn"
+            (click)="next()"
             style="
               color: #737373;
               border-color: none !important;
@@ -179,18 +180,25 @@
                             class="form-label custom-form-label"
                             ><b>Relationship</b></label
                           >
-                          <input
-                            type="text"
-                            class="form-control custon-input-field"
-                            id="relation"
+                          <select
                             formControlName="relation"
+                            id="year"
+                            class="form-select custon-select-field"
                             placeholder="Parent"
                             style="
+                              color: #949494;
                               background: url(../../../assets/images/donate-heart.svg)
                                 no-repeat scroll 15px 9px;
                               padding-left: 60px;
                             "
-                          />
+                          >
+                            <option
+                              class="option"
+                              *ngFor="let relationship of relationship"
+                            >
+                              {{ relationship.relationship }}
+                            </option>
+                          </select>
                         </div>
                         <div class="mt-50">
                           <label

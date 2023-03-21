@@ -1,0 +1,13 @@
+
+@import '../../../variable.scss';
+
+
+.notification-text{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $sky-blue;
+    margin-top: 5px;
+}

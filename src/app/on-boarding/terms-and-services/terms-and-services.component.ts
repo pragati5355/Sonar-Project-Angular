@@ -36,6 +36,6 @@ export class TermsAndServicesComponent implements OnInit {
   }
 
   decline(){
-    
+    this.router.navigate(['/onboarding/select']);
   }
 }

@@ -20,10 +20,7 @@
 .services-text{
     height: 600px;
     overflow-y: scroll;
-    border-color: black;
-    outline: black;
-    box-shadow: black;
-    border: 0.5px solid grey;
+    border: 0.2px solid rgb(187, 186, 186);
     border-radius: 8px;
     padding: 20px 20px 20px 20px;
 }
@@ -35,13 +32,13 @@
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0px 0px 5px grey; 
-    border-radius: 5px;
+    border-radius: 25px;
 }
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-     background: #2CA3D1; 
-    border-radius: 10px;
+    background: #2CA3D1; 
+    border-radius: 25px;
 }
 
 .custom-decline-btn{
@@ -71,5 +68,29 @@
     font-size: 20px;
     line-height: 166%;  
     letter-spacing: -0.02em;
+}
+
+.terms-header{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 166%;  
+    letter-spacing: -0.02em;
+}
+
+.terms-sub-header{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 166%;  
+    letter-spacing: -0.02em;  
+}
+
+.custom-ok-btn{
+    width: 160px;
+    height: 60px;
+    background : #f9f9f9;
+    color: $sky-blue; 
+    border-color: $sky-blue;
+    outline: $sky-blue;
+    border-radius: 8px;
 }
   

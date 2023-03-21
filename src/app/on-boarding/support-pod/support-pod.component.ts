@@ -1,12 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ApiService } from 'src/app/shared/service/api.service';
 @Component({
   selector: 'app-support-pod',
   templateUrl: './support-pod.component.html',
   styleUrls: ['./support-pod.component.scss']
 })
 export class SupportPodComponent implements OnInit {
+
+  relationship : string | any = [""];
+  getSubscription !: Subscription;
+
+  data = {
+    name : "",
+    relationShip : "",
+    email : "",
+    phoneNumber : "",
+  }
 
   emailpattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
   alphaPattern = "[a-zA-Z][a-zA-Z ]+";
@@ -20,10 +32,21 @@ export class SupportPodComponent implements OnInit {
   });
 
   constructor(
-    private router : Router
+    private router : Router,
+    private apiService : ApiService,
   ) { }
 
   ngOnInit(): void {
+
+    this.getSubscription = this.apiService.getRelationship().subscribe(
+      (res:any) => {
+        this.relationship = res.data;
+      },
+      (err:any)=> {
+        console.error(err);
+      }
+    );
+
   }
 
   get form()
@@ -60,7 +83,12 @@ export class SupportPodComponent implements OnInit {
   submit(formData:any){
     let closeModal = document.getElementById('closeModal');
     closeModal?.click();
-    console.log(this.supportForm);
+
+    this.data.name = formData.supportName;
+    this.data.relationShip = formData.relation;
+    this.data.email = formData.email;
+    this.data.phoneNumber = formData.mobileNo;
+    this.apiService.postAddSupport(this.data).subscribe();
   }
 
   addForm(){

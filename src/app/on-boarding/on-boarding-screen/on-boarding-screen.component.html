@@ -206,7 +206,10 @@
           <div class="card custom-cardbody">
             <div class="caroffset-md-1d-body">
               <div class="privacy-logo text-center mt-25">
-                <img src="../../../assets/images/privacy_logo.svg" alt="" />
+                <img
+                  src="../../../assets/images/privacy_protection_logo.svg"
+                  alt=""
+                />
               </div>
               <div class="card-header-text mt-10">
                 <b>Protecting Your Privacy.</b>
@@ -244,22 +247,114 @@
         </div>
       </ng-container>
 
-      <div
-        class="dot-indicator text-center mt-50"
-        style="margin-bottom: 60px; padding: 0px"
-      >
-        <ol
-          class="ob-carousel-indicators"
-          style="display: flex; justify-content: center"
+      <ng-container *ngIf="currentScreen == 1">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
         >
-          <li class="dot-gray active"></li>
-          <li class="dot-gray"></li>
-          <li class="dot-gray"></li>
-          <li class="dot-gray"></li>
-          <li class="dot-gray"></li>
-          <li class="dot-gray"></li>
-        </ol>
-      </div>
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray active"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+          </ol>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 2">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
+        >
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray"></li>
+            <li class="dot-gray active"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+          </ol>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 3">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
+        >
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray active"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+          </ol>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 4">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
+        >
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray active"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+          </ol>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 5">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
+        >
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray active"></li>
+            <li class="dot-gray"></li>
+          </ol>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentScreen == 6">
+        <div
+          class="dot-indicator text-center mt-50"
+          style="margin-bottom: 60px; padding: 0px"
+        >
+          <ol
+            class="ob-carousel-indicators"
+            style="display: flex; justify-content: center"
+          >
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray"></li>
+            <li class="dot-gray active"></li>
+          </ol>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

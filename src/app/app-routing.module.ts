@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path : 'onboarding',
     loadChildren : () => import('./on-boarding/on-boarding.module').then(m => m.OnBoardingModule)
+  },{
+
+    path : 'dashboard',
+    loadChildren : () => import('./dash-boarding/dash-boarding.module').then(m => m.DashBoardingModule)
   },
   {
     path : '',

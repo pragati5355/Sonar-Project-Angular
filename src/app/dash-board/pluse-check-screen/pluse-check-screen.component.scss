@@ -1,0 +1,73 @@
+@import "../../../variable.scss";
+
+.dash-header{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.dash-text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 166%;
+    letter-spacing: -0.02em;
+    color: $background;
+}   
+
+.dash-btn{
+    background: $sky-blue;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $light;
+    padding: 10px 0 10px 0px;
+}
+
+.cancle-btn{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $sky-blue;
+    margin-bottom: 30px;
+}
+
+.cancle-header{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.cancle-sub-header{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.custom-yes-btn{
+    background : #f9f9f9;
+    color: $sky-blue;
+    border-color: $sky-blue;
+    outline: $sky-blue;
+    border-radius: 10px;
+    
+}
+
+.custom-no-btn{
+    background-color: $sky-blue;
+    color: $light;
+    border-radius: 10px;
+    padding: 15px 5px 15px 5px;
+}

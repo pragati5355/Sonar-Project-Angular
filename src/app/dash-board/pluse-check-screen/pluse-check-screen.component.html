@@ -1,0 +1,102 @@
+<div class="pluse-screen">
+  <app-slide-bar></app-slide-bar>
+  <div class="container">
+    <div class="row mt-50">
+      <div class="col-md-12 mt-40">
+        <div class="card custom-dash-card">
+          <div class="card-body">
+            <div class="dash-header mt-40">
+              <b>Pulse Check Survey</b>
+            </div>
+            <div class="dash-img text-center mt-40">
+              <img src="../../../assets/images/Illustration.svg" alt="" />
+            </div>
+            <div class="row">
+              <div class="offset-md-1 col-md-11">
+                <div class="dash-text text-center mt-40">
+                  <p style="text-align: initial">
+                    We’re here to help you through every step of your mental
+                    health journey! This short 4-question surve helps us
+                    understand how you’re doing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="dash-btn text-center mt-50 d-grid gap-2 col-5 mx-auto">
+              <button class="btn dash-btn" type="button" (click)="submit()">
+                <b>Ok, I’m ready!</b>
+              </button>
+            </div>
+            <div class="cancle-btn text-center mt-20">
+              <a
+                type="submit"
+                data-bs-toggle="modal"
+                data-bs-target="#leaveModal"
+              >
+                <b>Cancle</b>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <div
+            class="modal fade"
+            id="leaveModal"
+            aria-hidden="true"
+            aria-labelledby="ex/* or 33px */ampleModalToggleLabel2"
+            tabindex="-1"
+            data-bs-backdrop="static"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-lg"
+              style="padding: 0 90px 0px 90px"
+            >
+              <div class="modal-content" style="border-radius: 20px">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="cancle-header text-center">
+                        <b>Leave this page? </b>
+                      </div>
+                      <div class="cancle-sub-header mt-25">
+                        <p>Your progress won’t be saved.</p>
+                      </div>
+                      <div class="custom-buttons mt-65" style="display: flex">
+                        <div
+                          class="custom-yes d-grid gap-2 col-6"
+                          style="margin-left: 15px"
+                        >
+                          <button class="btn custom-yes-btn" type="button">
+                            <b>Yes, back to my dashboard.</b>
+                          </button>
+                        </div>
+                        <div
+                          class="custom-no d-grid gap-2 col-5"
+                          style="margin-left: 25px"
+                        >
+                          <button
+                            class="btn custom-no-btn"
+                            type="button"
+                            data-bs-dismiss="modal"
+                          >
+                            <b>No, I’d like to stay.</b>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

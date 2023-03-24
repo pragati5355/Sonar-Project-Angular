@@ -1,0 +1,37 @@
+@import '../../../variable.scss';
+
+.custom-navbar{
+    position: absolute;
+    width: 140px;
+    height: 1380px;
+}
+
+.slide-nav{
+    margin-top: 85px;
+    margin-left: 15px;
+}
+
+.user-name{
+    font-size: 18px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.slide-text{
+    font-size: 18px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;
+}
+
+.logout-text{
+    font-size: 18px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #737373;
+}
+

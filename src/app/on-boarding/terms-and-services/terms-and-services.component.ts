@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/service/api.service';
+import { LocalService } from 'src/app/shared/service/local.service';
 
 @Component({
   selector: 'app-terms-and-services',
@@ -13,7 +15,9 @@ export class TermsAndServicesComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private apiService : ApiService,
+    private localService : LocalService
   ) { 
     let currentStep = this.route.snapshot.params['id'];
     if(currentStep != undefined && parseInt(currentStep)){
@@ -36,6 +40,9 @@ export class TermsAndServicesComponent implements OnInit {
   }
 
   decline(){
-    this.router.navigate(['/onboarding/select']);
+    this.apiService.deleteUser().subscribe();
+    this.localService.removeData();
+    this.localService.clearData();
+    this.router.navigate(['/onboarding/signup']);
   }
 }

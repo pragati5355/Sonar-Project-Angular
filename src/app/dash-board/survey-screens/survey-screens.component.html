@@ -1,0 +1,611 @@
+<div class="survey-screen">
+  <app-slide-bar></app-slide-bar>
+  <div class="container">
+    <div class="row mt-50">
+      <div class="col-md-12">
+        <div class="card custom-dash-card">
+          <ng-container *ngIf="currentScreen == 1">
+            <div class="card-body">
+              <div class="row">
+                <div class="offset-md-3 col-md-6">
+                  <div
+                    class="progress progress-border-round mt-85"
+                    role="progressbar"
+                    aria-label="Basic example"
+                  >
+                    <div
+                      class="progress-bar progress-border-round bg-color"
+                      aria-valuenow="0"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="start-value">1/5</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="end-value">5/5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="survey-header mt-40 text-center">
+                <b>Pulse Check Survey</b>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ques-one mt-30" style="display: flex">
+                    <div class="one-img">
+                      <img src="../../../assets/images/one_img.svg" alt="" />
+                    </div>
+                    <div class="que-one">
+                      Rate how you’re feeling on a scale of 1-5, with
+                      <b>1 being anxious</b> and <b>5 being calm. </b>
+                      <span style="color: red"> *</span>
+                    </div>
+                  </div>
+                  <div class="options" style="display: flex">
+                    <div class="option-one-btn mt-60">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Anxious Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">1</div>
+                        </div>
+                        <div>Anxious</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Anxious Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">2</div>
+                        </div>
+                        <div style="color: #f2f2f2">Anxious</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Neutral Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">3</div>
+                        </div>
+                        <div>Netural</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Calm Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">4</div>
+                        </div>
+                        <div style="color: #f2f2f2">Calm</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Calm Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">5</div>
+                        </div>
+                        <div>Calm</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="optional-que mt-85">
+                    <div
+                      class="optional-text text-center"
+                      style="display: flex"
+                    >
+                      <div class="optional-btn">Optional</div>
+                      <div class="optional-que-text">
+                        What is causing this feeling?
+                      </div>
+                    </div>
+
+                    <textarea
+                      class="form-control mt-30"
+                      placeholder="I’ve been anxious lately because..."
+                      id="floatingTextarea2"
+                      style="
+                        height: 200px;
+                        background: #f9f9f9;
+                        border: 1px solid #949494;
+                        border-radius: 18px;
+                        padding: 25px;
+                        font-size: 20px;
+                      "
+                    ></textarea>
+                  </div>
+                  <div class="submit-btn text-center">
+                    <button
+                      class="btn custom-nextbtn"
+                      type="submit"
+                      (click)="next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                  <div class="goback-btn text-center mt-20">
+                    <a type="submit" (click)="goBack()">
+                      <b>Go Back</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="currentScreen == 2">
+            <div class="card-body">
+              <div class="row">
+                <div class="offset-md-3 col-md-6">
+                  <div
+                    class="progress progress-border-round mt-85"
+                    role="progressbar"
+                    aria-label="Basic example"
+                  >
+                    <div
+                      class="progress-bar progress-border-round bg-color"
+                      style="width: 25%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="start-value">2/5</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="end-value">5/5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="survey-header mt-40 text-center">
+                <b>Pulse Check Survey</b>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ques-one mt-30" style="display: flex">
+                    <div class="one-img">
+                      <img src="../../../assets/images/two_img.svg" alt="" />
+                    </div>
+                    <div class="que-one">
+                      Rate how you’re feeling on a scale of 1-5, with
+                      <b>1 being lonely</b> and <b>5 being connected. </b>
+                      <span style="color: red"> *</span>
+                    </div>
+                  </div>
+                  <div class="options" style="display: flex">
+                    <div class="option-one-btn mt-60">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Lonely Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">1</div>
+                        </div>
+                        <div>Lonely</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Lonely Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">2</div>
+                        </div>
+                        <div style="color: #f2f2f2">Lonely</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Neutral Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">3</div>
+                        </div>
+                        <div>Netural</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Calm Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">4</div>
+                        </div>
+                        <div style="color: #f2f2f2">Calm</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Connected Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">5</div>
+                        </div>
+                        <div>Connected</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="optional-que mt-85">
+                    <div
+                      class="optional-text text-center"
+                      style="display: flex"
+                    >
+                      <div class="optional-btn">Optional</div>
+                      <div class="optional-que-text">
+                        What is causing this feeling?
+                      </div>
+                    </div>
+
+                    <textarea
+                      class="form-control mt-30"
+                      placeholder="I’ve been anxious lately because..."
+                      id="floatingTextarea2"
+                      style="
+                        height: 200px;
+                        background: #f9f9f9;
+                        border: 1px solid #949494;
+                        border-radius: 18px;
+                        padding: 25px;
+                        font-size: 20px;
+                      "
+                    ></textarea>
+                  </div>
+                  <div class="submit-btn text-center">
+                    <button
+                      class="btn custom-nextbtn"
+                      type="submit"
+                      (click)="next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                  <div class="goback-btn text-center mt-20">
+                    <a type="submit" (click)="goBackToFirst()">
+                      <b>Go Back</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="currentScreen == 3">
+            <div class="card-body">
+              <div class="row">
+                <div class="offset-md-3 col-md-6">
+                  <div
+                    class="progress progress-border-round mt-85"
+                    role="progressbar"
+                    aria-label="Basic example"
+                  >
+                    <div
+                      class="progress-bar progress-border-round bg-color"
+                      style="width: 50%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="start-value">3/5</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="end-value">5/5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="survey-header mt-40 text-center">
+                <b>Pulse Check Survey</b>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ques-one mt-30" style="display: flex">
+                    <div class="one-img">
+                      <img src="../../../assets/images/third_img.svg" alt="" />
+                    </div>
+                    <div class="que-one">
+                      Rate how you’re feeling on a scale of 1-5, with
+                      <b>1 being failure</b> and <b>5 being successful. </b>
+                      <span style="color: red"> *</span>
+                    </div>
+                  </div>
+                  <div class="options" style="display: flex">
+                    <div class="option-one-btn mt-60">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Lonely Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">1</div>
+                        </div>
+                        <div>Failer</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Lonely Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">2</div>
+                        </div>
+                        <div style="color: #f2f2f2">Lonely</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Neutral Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">3</div>
+                        </div>
+                        <div>Netural</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Slightly Calm Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">4</div>
+                        </div>
+                        <div style="color: #f2f2f2">Calm</div>
+                      </button>
+                    </div>
+                    <div class="option-one-btn mt-60 ml-24">
+                      <button type="submit" class="btn custom-options">
+                        <div>
+                          <img
+                            src="../../../assets/images/Calm Face.svg"
+                            alt=""
+                          />
+                          <div style="margin-top: 10px">5</div>
+                        </div>
+                        <div>Successful</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="optional-que mt-85">
+                    <div
+                      class="optional-text text-center"
+                      style="display: flex"
+                    >
+                      <div class="optional-btn">Optional</div>
+                      <div class="optional-que-text">
+                        What is causing this feeling?
+                      </div>
+                    </div>
+
+                    <textarea
+                      class="form-control mt-30"
+                      placeholder="I’ve been anxious lately because..."
+                      id="floatingTextarea2"
+                      style="
+                        height: 200px;
+                        background: #f9f9f9;
+                        border: 1px solid #949494;
+                        border-radius: 18px;
+                        padding: 25px;
+                        font-size: 20px;
+                      "
+                    ></textarea>
+                  </div>
+                  <div class="submit-btn text-center">
+                    <button
+                      class="btn custom-nextbtn"
+                      type="submit"
+                      (click)="next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                  <div class="goback-btn text-center mt-20">
+                    <a type="submit" (click)="goBackToThird()">
+                      <b>Go Back</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="currentScreen == 4">
+            <div class="card-body">
+              <div class="row">
+                <div class="offset-md-3 col-md-6">
+                  <div
+                    class="progress progress-border-round mt-85"
+                    role="progressbar"
+                    aria-label="Basic example"
+                  >
+                    <div
+                      class="progress-bar progress-border-round bg-color"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="start-value">4/5</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="end-value">5/5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="survey-header mt-40 text-center">
+                <b>Pulse Check Survey</b>
+              </div>
+              <div class="row">
+                <div class="offset-md-1 col-md-10">
+                  <div class="ques-one mt-30" style="display: flex">
+                    <div class="one-img">
+                      <img src="../../../assets/images/four_img.svg" alt="" />
+                    </div>
+                    <div class="que-one" style="margin-top: 7px">
+                      Would you like to check-in with someone?
+                      <span style="color: red"> *</span>
+                    </div>
+                  </div>
+                  <div
+                    class="options offset-md-1 mt-40"
+                    style="padding-left: 20px"
+                  >
+                    <div class="custom-checkbox">
+                      <label style="margin-left: 15px"
+                        >Yes, I would like to check-in with someone.
+                        <input type="radio" name="flexRadioDefault" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+
+                    <div class="custom-checkbox">
+                      <label style="margin-left: 15px"
+                        >No, thanks.
+                        <input type="radio" name="flexRadioDefault" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="submit-btn text-center mt-150">
+                    <button
+                      class="btn custom-nextbtn"
+                      type="submit"
+                      (click)="next()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                  <div class="goback-btn text-center mt-20">
+                    <a type="submit" (click)="goBackToThird()">
+                      <b>Go Back</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="currentScreen == 5">
+            <div class="card-body">
+              <div class="row">
+                <div class="offset-md-3 col-md-6">
+                  <div
+                    class="progress progress-border-round mt-85"
+                    role="progressbar"
+                    aria-label="Basic example"
+                  >
+                    <div
+                      class="progress-bar progress-border-round bg-color"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="start-value">5/5</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="end-value">5/5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="survey-header mt-40 text-center">
+                <b>Pulse Check Survey</b>
+              </div>
+              <div class="row">
+                <div class="offset-md-1 col-md-10">
+                  <div class="ques-one mt-30" style="display: flex">
+                    <div class="one-img">
+                      <img src="../../../assets/images/four_img.svg" alt="" />
+                    </div>
+                    <div class="que-one" style="margin-top: 7px">
+                      Would you like to check-in with someone?
+                      <span style="color: red"> *</span>
+                    </div>
+                  </div>
+                  <div
+                    class="options offset-md-1 mt-40"
+                    style="padding-left: 20px"
+                  >
+                    <div class="custom-checkbox">
+                      <label style="margin-left: 15px"
+                        >Yes, I would like to check-in with someone.
+                        <input type="radio" name="flexRadioDefault" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+
+                    <div class="custom-checkbox">
+                      <label style="margin-left: 15px"
+                        >No, thanks.
+                        <input type="radio" name="flexRadioDefault" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="submit-btn text-center mt-150">
+                    <button
+                      class="btn custom-nextbtn"
+                      type="submit"
+                      (click)="allDone()"
+                    >
+                      Next
+                    </button>
+                  </div>
+                  <div class="goback-btn text-center mt-20">
+                    <a type="submit" (click)="goBackToFourth()">
+                      <b>Go Back</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

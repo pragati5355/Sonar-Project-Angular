@@ -29,6 +29,7 @@ export class SupportPodComponent implements OnInit {
     relation : new FormControl('',[Validators.required,Validators.maxLength(10), this.noSpaceAllowed, Validators.pattern(this.alphaPattern)]),
     email : new FormControl('',[Validators.required,Validators.pattern(this.emailpattern)]),
     mobileNo : new FormControl('',[Validators.required,Validators.pattern(this.mobilePattern)]),
+    checkBox : new FormControl()
   });
 
   constructor(
@@ -70,6 +71,10 @@ export class SupportPodComponent implements OnInit {
     return this.supportForm.get('email');
   }
 
+  get checkBox() {
+    return this.supportForm.get('checkBox');
+  }
+
 
   noSpaceAllowed(control : FormControl){
 
@@ -89,6 +94,7 @@ export class SupportPodComponent implements OnInit {
     this.data.email = formData.email;
     this.data.phoneNumber = formData.mobileNo;
     this.apiService.postAddSupport(this.data).subscribe();
+    this.supportForm.reset();
   }
 
   addForm(){

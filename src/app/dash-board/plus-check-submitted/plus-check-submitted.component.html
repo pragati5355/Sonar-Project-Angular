@@ -1,0 +1,54 @@
+<div class="submit-screen">
+  <app-slide-bar></app-slide-bar>
+  <div class="container">
+    <div class="row mt-50">
+      <div class="col-md-12">
+        <div class="card custom-dash-card">
+          <div class="card-body">
+            <div class="row">
+              <div class="offset-md-3 col-md-6">
+                <div
+                  class="progress progress-border-round mt-85"
+                  role="progressbar"
+                  aria-label="Basic example"
+                >
+                  <div
+                    class="progress-bar progress-border-round bg-color"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="start-value">5/5</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="end-value">5/5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="survey-header mt-40 text-center">
+              <b>All Done!</b>
+            </div>
+            <div class="alldone-img text-center mt-15">
+              <img src="../../../assets/images/AllDone_img.svg" alt="" />
+            </div>
+            <div class="back-btn text-center mt-40">
+              <button
+                class="btn custom-nextbtn"
+                type="submit"
+                (click)="backToDashborad()"
+                style="margin-bottom: 100px"
+              >
+                Ok, back to my dashboard.
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

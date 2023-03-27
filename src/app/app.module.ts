@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ElementsModule } from './elements/elements.module';
+import { NgxMaskModule } from 'ngx-mask';
+
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { ElementsModule } from './elements/elements.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ElementsModule
+    ElementsModule,
+    NgxMaskModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent]

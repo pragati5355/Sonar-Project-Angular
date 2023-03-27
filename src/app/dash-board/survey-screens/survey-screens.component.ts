@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
   selector: 'app-survey-screens',
@@ -10,9 +11,12 @@ export class SurveyScreensComponent implements OnInit {
 
   currentScreen: number = 0;
 
+  progressBar : number = 0;
+
   constructor(
     private router : Router,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private dataService : DataService
   ) { 
     let currentStep = this.route.snapshot.params['id'];
     if(currentStep != undefined && parseInt(currentStep)){
@@ -51,7 +55,7 @@ export class SurveyScreensComponent implements OnInit {
   }
 
   allDone(){
-  
+    this.router.navigate(["/dashboard/submitted"]);
   }
 
 }

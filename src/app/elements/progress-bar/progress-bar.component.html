@@ -1,0 +1,23 @@
+<div class="progress-bar-screen">
+  <div
+    class="progress progress-border-round mt-85"
+    role="progressbar"
+    aria-label="Basic example"
+  >
+    <div
+      class="progress-bar progress-border-round bg-color"
+      [ngStyle]="myStyle"
+      attr.aria-valuenow="{{ progress }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="start-value">5/5</div>
+    </div>
+    <div class="col-md-6">
+      <div class="end-value">5/5</div>
+    </div>
+  </div>
+</div>

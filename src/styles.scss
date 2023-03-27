@@ -332,3 +332,12 @@ input[type='email']:focus, input[type='password']:focus, input[type='text']:focu
     border-radius: 1rem;
     margin-left: 100px;
 }
+
+.survey-header{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $background;    
+}

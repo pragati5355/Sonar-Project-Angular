@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/shared/service/api.service';
+import { DataService } from 'src/app/shared/service/data.service';
 @Component({
   selector: 'app-support-pod',
   templateUrl: './support-pod.component.html',
@@ -12,6 +13,8 @@ export class SupportPodComponent implements OnInit {
 
   relationship : string | any = [""];
   getSubscription !: Subscription;
+
+  userData: any = [];
 
   data = {
     name : "",
@@ -35,6 +38,7 @@ export class SupportPodComponent implements OnInit {
   constructor(
     private router : Router,
     private apiService : ApiService,
+    private dataService : DataService
   ) { }
 
   ngOnInit(): void {
@@ -100,6 +104,10 @@ export class SupportPodComponent implements OnInit {
   addForm(){
     let closeSucess = document.getElementById('closeSucess');
     closeSucess?.click();
+  }
+
+  addDetails(){
+    this.dataService.addUserDetails.next(true);
   }
 
   next(){

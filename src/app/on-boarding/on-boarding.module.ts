@@ -13,6 +13,7 @@ import { SupportPodComponent } from './support-pod/support-pod.component';
 import { OptInComponent } from './opt-in/opt-in.component';
 import { TermsAndServicesComponent } from './terms-and-services/terms-and-services.component';
 import { ConfirmationScreenComponent } from './confirmation-screen/confirmation-screen.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ConfirmationScreenComponent } from './confirmation-screen/confirmation-
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
+    NgxMaskModule.forRoot({}),
   ]
 })
 export class OnBoardingModule { }

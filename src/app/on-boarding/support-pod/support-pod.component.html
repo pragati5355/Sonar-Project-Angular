@@ -48,6 +48,10 @@
               crisis situations as required by law.
             </p>
           </div>
+          <div *ngFor="let user of userData">
+            <app-add-details [userDetail]="user"></app-add-details>
+          </div>
+
           <!-- <div class="added-support">
             <div class="support-avtar">
               <img src="../../../assets/images/Avatar 1.svg" alt="" />
@@ -133,6 +137,8 @@
                             <input
                               type="text"
                               class="form-control custon-input-field"
+                              value=""
+                              autocomplete="off"
                               id="supportName"
                               formControlName="supportName"
                               placeholder="Clay Lee"
@@ -184,7 +190,7 @@
                             formControlName="relation"
                             id="year"
                             class="form-select custon-select-field"
-                            placeholder="Parent"
+                            placeholder="Choose"
                             style="
                               color: #949494;
                               background: url(../../../assets/images/donate-heart.svg)
@@ -210,6 +216,8 @@
                             type="email"
                             class="form-control custon-input-field"
                             id="email"
+                            value=""
+                            autocomplete="off"
                             aria-describedby="emailHelp"
                             formControlName="email"
                             placeholder="pods@getsonar.org"
@@ -249,6 +257,9 @@
                             type="text"
                             class="form-control custon-input-field"
                             id="mobileNo"
+                            value=""
+                            autocomplete="off"
+                            mask="000-000-0000"
                             formControlName="mobileNo"
                             placeholder="•• - •••• - ••••"
                             style="
@@ -286,6 +297,7 @@
                                 type="checkbox"
                                 class="form-check-input"
                                 id="exampleCheck1"
+                                value=""
                                 formControlName="chec"
                                 style="
                                   width: 34px;
@@ -382,6 +394,7 @@
                           class="btn custom-ok-btn"
                           type="button"
                           data-bs-dismiss="modal"
+                          (click)="addDetails()"
                         >
                           <b>Ok</b>
                         </button>

@@ -1,0 +1,14 @@
+@import "../../../variable.scss";
+
+.custom-nextbtn{
+    background: $sky-blue;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 166%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $light;
+    margin-top: 30px;
+    font-weight: 600;
+    padding: 15px 95px 15px 95px;
+}

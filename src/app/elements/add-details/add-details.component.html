@@ -1,9 +1,11 @@
-<div class="add-details-screen" style="display: flex">
-  <div class="added-support" style="margin-right: 15px">
+<div class="add-details-screen" style="display: flex; margin-bottom: 10px">
+  <div class="added-support">
     <div class="support-avtar text-center">
       <img src="../../../assets/images/Avatar 1.svg" alt="" />
     </div>
-    <div class="support-name text-center mt-2">Pragati</div>
-    <div class="support-relation text-center mt-2">Gawade</div>
+    <div class="support-name text-center mt-2">{{ userDetail.name }}</div>
+    <div class="support-relation text-center mt-2">
+      {{ userDetail.relationShip }}
+    </div>
   </div>
 </div>

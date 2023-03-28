@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/service/api.service';
+import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
   selector: 'app-pluse-check-screen',
@@ -8,14 +10,18 @@ import { Router } from '@angular/router';
 })
 export class PluseCheckScreenComponent implements OnInit {
 
+  dataQuestion : string | any = '';
+
   constructor(
-    private router : Router
+    private router : Router,
+    private apiService : ApiService,
+    private dataService : DataService
   ) { }
 
   ngOnInit(): void {
   }
 
   submit(){
-    this.router.navigate(["/dashboard/survey/1"])
+    this.router.navigate(["/dashboard/survey/1"]);
   }
 }

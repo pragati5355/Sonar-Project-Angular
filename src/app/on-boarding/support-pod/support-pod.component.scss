@@ -1,5 +1,17 @@
 @import "../../../variable.scss";
 
+.custom-support-btn{
+    background : #f9f9f9;
+    color: $sky-blue; 
+    padding: 15px 25px 15px 25px;
+    border-color: $sky-blue;
+    outline: $sky-blue;
+    border-radius: 10px;
+}
+
+.custom-support-btn:hover{
+    color: $sky-blue; 
+}
 
 .custom-next-btn{
     width: 200px;
@@ -79,6 +91,7 @@
 }
 
 .custon-select-field{
+    color: grey;
     border: 1px solid #bababa;
     border-radius: 8px;
     box-sizing: border-box;
@@ -87,7 +100,6 @@
 
 .custon-select-field:hover{
     border: 1px solid #252525;
-    color: black;
     background: url(../../../assets/images/donate-heart.svg)
         no-repeat scroll 15px 9px;
     padding-left: 60px;
@@ -95,6 +107,10 @@
 
 .form-select:hover, .option {
     cursor: pointer;
+    color: black;
+}
+
+.ng-valid{
     color: black;
 }
 

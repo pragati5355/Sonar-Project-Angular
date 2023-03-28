@@ -51,4 +51,12 @@ export class ApiService {
       }
     });
   }
+
+  getQuestions() : Observable<any> {
+    return this.http.get(this.baseUrl + '/onboarding/questions' , {
+      headers : {
+        "Authorization" : "Bearer " + this.localService.getData()
+      }
+    });
+  }
 }

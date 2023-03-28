@@ -23,7 +23,6 @@ export class OnBoardingScreenComponent implements OnInit, OnChanges {
     }
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     console.log(this.currentScreen);
   }
 

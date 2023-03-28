@@ -14,6 +14,7 @@ import { OptInComponent } from './opt-in/opt-in.component';
 import { TermsAndServicesComponent } from './terms-and-services/terms-and-services.component';
 import { ConfirmationScreenComponent } from './confirmation-screen/confirmation-screen.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { NgxMaskModule } from 'ngx-mask';
     RouterModule,
     FormsModule,
     NgxMaskModule.forRoot({}),
+    NgSelectModule
   ]
 })
 export class OnBoardingModule { }

@@ -10,5 +10,7 @@ export class DataService {
   progressWidth = new BehaviorSubject<boolean>(false);
   addUserDetails = new BehaviorSubject<boolean>(false);
 
+  getQuestions = new BehaviorSubject([""]);
+
   constructor() { }
 }

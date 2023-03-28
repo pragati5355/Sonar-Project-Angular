@@ -39,11 +39,10 @@
                     <div class="one-img">
                       <img src="../../../assets/images/one_img.svg" alt="" />
                     </div>
-                    <div class="que-one">
-                      Rate how you’re feeling on a scale of 1-5, with
-                      <b>1 being anxious</b> and <b>5 being calm. </b>
-                      <span style="color: red"> *</span>
-                    </div>
+                    <div
+                      class="que-one"
+                      [innerHTML]="questionsData[0].questions"
+                    ></div>
                   </div>
                   <div class="options" style="display: flex">
                     <div class="option-one-btn mt-60">
@@ -186,11 +185,10 @@
                     <div class="one-img">
                       <img src="../../../assets/images/two_img.svg" alt="" />
                     </div>
-                    <div class="que-one">
-                      Rate how you’re feeling on a scale of 1-5, with
-                      <b>1 being lonely</b> and <b>5 being connected. </b>
-                      <span style="color: red"> *</span>
-                    </div>
+                    <div
+                      class="que-one"
+                      [innerHTML]="questionsData[1].questions"
+                    ></div>
                   </div>
                   <div class="options" style="display: flex">
                     <div class="option-one-btn mt-60">
@@ -333,11 +331,10 @@
                     <div class="one-img">
                       <img src="../../../assets/images/third_img.svg" alt="" />
                     </div>
-                    <div class="que-one">
-                      Rate how you’re feeling on a scale of 1-5, with
-                      <b>1 being failure</b> and <b>5 being successful. </b>
-                      <span style="color: red"> *</span>
-                    </div>
+                    <div
+                      class="que-one"
+                      [innerHTML]="questionsData[2].questions"
+                    ></div>
                   </div>
                   <div class="options" style="display: flex">
                     <div class="option-one-btn mt-60">
@@ -480,10 +477,11 @@
                     <div class="one-img">
                       <img src="../../../assets/images/four_img.svg" alt="" />
                     </div>
-                    <div class="que-one" style="margin-top: 7px">
-                      Would you like to check-in with someone?
-                      <span style="color: red"> *</span>
-                    </div>
+                    <div
+                      class="que-one"
+                      style="margin-top: 7px"
+                      [innerHTML]="questionsData[3].questions"
+                    ></div>
                   </div>
                   <div
                     class="options offset-md-1 mt-40"
@@ -560,10 +558,11 @@
                     <div class="one-img">
                       <img src="../../../assets/images/five_img.svg" alt="" />
                     </div>
-                    <div class="que-one" style="margin-top: 7px">
-                      Is there an emergency?
-                      <span style="color: red"> *</span>
-                    </div>
+                    <div
+                      class="que-one"
+                      style="margin-top: 7px"
+                      [innerHTML]="questionsData[4].questions"
+                    ></div>
                   </div>
                   <div
                     class="options offset-md-1 mt-40"

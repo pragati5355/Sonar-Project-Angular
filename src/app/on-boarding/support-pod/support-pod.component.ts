@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -40,11 +40,13 @@ export class SupportPodComponent implements OnInit {
     private apiService : ApiService,
     private dataService : DataService
   ) { }
+ 
 
   ngOnInit(): void {
 
     this.getSubscription = this.apiService.getRelationship().subscribe(
       (res:any) => {
+        console.log(res.data);
         this.relationship = res.data;
       },
       (err:any)=> {
@@ -52,6 +54,20 @@ export class SupportPodComponent implements OnInit {
       }
     );
 
+    this.getListSupport();
+
+  }
+
+
+  getListSupport(){
+
+    this.apiService.getListSupports().subscribe(
+      (res:any)=>{
+        console.log(res.data);
+        this.userData = res.data;
+        this.dataService.addUserDetails.next(true);
+      }
+    )
   }
 
   get form()
@@ -107,7 +123,7 @@ export class SupportPodComponent implements OnInit {
   }
 
   addDetails(){
-    this.dataService.addUserDetails.next(true);
+   this.getListSupport();
   }
 
   next(){

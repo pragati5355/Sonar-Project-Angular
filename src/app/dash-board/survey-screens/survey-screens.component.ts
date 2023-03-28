@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/service/api.service';
 import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
@@ -13,20 +14,29 @@ export class SurveyScreensComponent implements OnInit {
 
   progressBar : number = 0;
 
+  questionsData : string | any = '';
+
   constructor(
     private router : Router,
     private route : ActivatedRoute,
-    private dataService : DataService
+    private dataService : DataService,
+    private apiService : ApiService,
   ) { 
     let currentStep = this.route.snapshot.params['id'];
     if(currentStep != undefined && parseInt(currentStep)){
       this.currentScreen = parseInt(currentStep);
     } else {
-    this.router.navigate(["/dashboard"]);  
+      this.router.navigate(["/dashboard"]);  
     }
   }
 
   ngOnInit(): void {
+
+    this.apiService.getQuestions().subscribe(
+      (res:any)=>{
+        this.questionsData = res.data;
+      }
+    );
   }
 
   goBack(){

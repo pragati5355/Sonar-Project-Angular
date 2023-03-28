@@ -11,15 +11,14 @@ export class AddDetailsComponent implements OnInit {
 
   @Input() userDetail :string | any = '';
 
-  isChecked : boolean = false;
+  isChecked : boolean |any;
 
   constructor(
     private dataService : DataService,
-    private apiService : ApiService
   ) { }
 
   ngOnInit(): void {
-
+    console.log("userDetail",this.userDetail)
     this.dataService.addUserDetails.subscribe(
       (res)=>{
         console.log(res);

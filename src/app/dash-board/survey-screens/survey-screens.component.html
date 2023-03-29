@@ -46,33 +46,41 @@
                   </div>
                   <div class="options" style="display: flex">
                     <div class="option-one-btn mt-60">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        id="selectAns"
+                        (click)="selectAns(1)"
+                      >
                         <div>
-                          <img
-                            src="../../../assets/images/Anxious Face.svg"
-                            alt=""
-                          />
+                          <img id="imageOne" src="{{ btn1 }}" alt="" />
                           <div style="margin-top: 10px">1</div>
                         </div>
                         <div>Anxious</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(2)"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
-                          <img
-                            src="../../../assets/images/Slightly Anxious Face.svg"
-                            alt=""
-                          />
+                          <img id="imageTwo" src="{{ btn2 }}" alt="" />
                           <div style="margin-top: 10px">2</div>
                         </div>
-                        <div style="color: #f2f2f2">Anxious</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(3)"
+                      >
                         <div>
                           <img
+                            id="imageThree"
                             src="../../../assets/images/Neutral Face.svg"
                             alt=""
                           />
@@ -82,21 +90,31 @@
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(4)"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
                           <img
+                            id="imageFour"
                             src="../../../assets/images/Slightly Calm Face.svg"
                             alt=""
                           />
                           <div style="margin-top: 10px">4</div>
                         </div>
-                        <div style="color: #f2f2f2">Calm</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(5)"
+                      >
                         <div>
                           <img
+                            id="imageFive"
                             src="../../../assets/images/Calm Face.svg"
                             alt=""
                           />
@@ -192,7 +210,12 @@
                   </div>
                   <div class="options" style="display: flex">
                     <div class="option-one-btn mt-60">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        id="selectAns"
+                        (click)="selectAns(1)"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Lonely Face.svg"
@@ -204,7 +227,12 @@
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(2)"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Slightly Lonely Face.svg"
@@ -212,11 +240,14 @@
                           />
                           <div style="margin-top: 10px">2</div>
                         </div>
-                        <div style="color: #f2f2f2">Lonely</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(3)"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Neutral Face.svg"
@@ -228,7 +259,12 @@
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(4)"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Slightly Calm Face.svg"
@@ -236,11 +272,14 @@
                           />
                           <div style="margin-top: 10px">4</div>
                         </div>
-                        <div style="color: #f2f2f2">Calm</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        (click)="selectAns(5)"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Connected Face.svg"
@@ -350,7 +389,11 @@
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Slightly Lonely Face.svg"
@@ -358,7 +401,6 @@
                           />
                           <div style="margin-top: 10px">2</div>
                         </div>
-                        <div style="color: #f2f2f2">Lonely</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
@@ -374,7 +416,11 @@
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">
-                      <button type="submit" class="btn custom-options">
+                      <button
+                        type="submit"
+                        class="btn custom-options"
+                        style="height: 159px; padding: 0 0 24px 0px"
+                      >
                         <div>
                           <img
                             src="../../../assets/images/Slightly Calm Face.svg"
@@ -382,7 +428,6 @@
                           />
                           <div style="margin-top: 10px">4</div>
                         </div>
-                        <div style="color: #f2f2f2">Calm</div>
                       </button>
                     </div>
                     <div class="option-one-btn mt-60 ml-24">

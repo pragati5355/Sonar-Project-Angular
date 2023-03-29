@@ -10,11 +10,25 @@ import { DataService } from 'src/app/shared/service/data.service';
 })
 export class SurveyScreensComponent implements OnInit {
 
+  // imageArray = ['../../../assets/images/Anxious Face.svg',
+  // '../../../assets/images/AnxiousFace_white.svg'];
+  
+    imageArray=[
+      ['../../../assets/images/Anxious Face.svg','../../../assets/images/AnxiousFace_white.svg'],
+      ['../../../assets/images/Slightly Anxious Face.svg','../../../assets/images/SlightlyAnxiousFace_white.svg']]
+  btn1=this.imageArray[0][0];
+  btn2=this.imageArray[1][0];
+  // image=this.imageArray[0];
+  // image=this.imageArray[0];
+  // image=this.imageArray[0];
+  
+
+
   currentScreen: number = 0;
 
-  progressBar : number = 0;
-
   questionsData : string | any = '';
+
+  optionalText: any;
 
   constructor(
     private router : Router,
@@ -66,6 +80,33 @@ export class SurveyScreensComponent implements OnInit {
 
   allDone(){
     this.router.navigate(["/dashboard/submitted"]);
+  }
+
+  selectAns(data:number){
+  switch(data){
+    case 1:{
+      this.btn2=this.imageArray[1][0];
+
+      if(this.btn1==this.imageArray[0][0]){
+        this.btn1=this.imageArray[0][1]
+      }else{
+        this.btn1=this.imageArray[0][0]
+      }
+      break;
+    }
+    case 2:{
+      this.btn1=this.imageArray[0][0];
+      if(this.btn2==this.imageArray[1][0]){
+        this.btn2=this.imageArray[1][1]
+      }else{
+        this.btn2=this.imageArray[1][0]
+      }
+      break;
+    }
+  }
+    console.log(data);
+    console.log(this.currentScreen);
+    
   }
 
 }
